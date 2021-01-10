@@ -76,9 +76,24 @@
 			"name": "Update Quotes",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"New Day\",\n    \"description\": \"New Day new life new opportunity\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes/5731f40c-8d50-49cc-a326-48bc678c7f0a?Authorization=Bearer {{authToken}}",
+					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes/f6626da7-dba1-48f4-9978-1125ebc70a68",
 					"protocol": "https",
 					"host": [
 						"{{apiId}}",
@@ -90,13 +105,7 @@
 					"path": [
 						"dev",
 						"quotes",
-						"5731f40c-8d50-49cc-a326-48bc678c7f0a"
-					],
-					"query": [
-						{
-							"key": "Authorization",
-							"value": "Bearer {{authToken}}"
-						}
+						"f6626da7-dba1-48f4-9978-1125ebc70a68"
 					]
 				}
 			},
