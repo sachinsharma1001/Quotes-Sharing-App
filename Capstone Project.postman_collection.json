@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"New Day\",\r\n    \"description\": \"\"\r\n}",
+					"raw": "{\r\n\t\"name\": \"New Day\",\r\n    \"description\": \"New Day new life\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -47,9 +47,15 @@
 			"name": "Get Quotes",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes?Authorization=Bearer {{authToken}}",
+					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes",
 					"protocol": "https",
 					"host": [
 						"{{apiId}}",
@@ -61,12 +67,6 @@
 					"path": [
 						"dev",
 						"quotes"
-					],
-					"query": [
-						{
-							"key": "Authorization",
-							"value": "Bearer {{authToken}}"
-						}
 					]
 				}
 			},
@@ -114,7 +114,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos/30127c5d-f515-45f1-800d-c559458284e6",
+					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes/b2a8e5ec-2d18-4132-b5e4-8dc2b16760e2",
 					"protocol": "https",
 					"host": [
 						"{{apiId}}",
@@ -125,8 +125,8 @@
 					],
 					"path": [
 						"dev",
-						"todos",
-						"30127c5d-f515-45f1-800d-c559458284e6"
+						"quotes",
+						"b2a8e5ec-2d18-4132-b5e4-8dc2b16760e2"
 					]
 				}
 			},
@@ -144,7 +144,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos/5731f40c-8d50-49cc-a326-48bc678c7f0a/attachment",
+					"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/quotes/b2a8e5ec-2d18-4132-b5e4-8dc2b16760e2/attachment",
 					"protocol": "https",
 					"host": [
 						"{{apiId}}",
@@ -155,8 +155,8 @@
 					],
 					"path": [
 						"dev",
-						"todos",
-						"5731f40c-8d50-49cc-a326-48bc678c7f0a",
+						"quotes",
+						"b2a8e5ec-2d18-4132-b5e4-8dc2b16760e2",
 						"attachment"
 					]
 				}
