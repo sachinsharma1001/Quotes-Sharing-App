@@ -6,12 +6,12 @@ import { getUserId } from '../utils';
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   
   const userId = getUserId(event);
-  const todoId = event.pathParameters.todoId;
+  const quoteId = event.pathParameters.quoteId;
 
-  const uploadUrl = await uploadGeneratedUrl(todoId);
-  const url = await attachmentUrl(todoId);
+  const uploadUrl = await uploadGeneratedUrl(quoteId);
+  const url = await attachmentUrl(quoteId);
 
-  await updateGeneratedUrl(userId, todoId, url);
+  await updateGeneratedUrl(userId, quoteId, url);
 
   return {
     statusCode: 200,
