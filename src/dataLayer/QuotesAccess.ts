@@ -42,20 +42,21 @@ export class QuotesAccess {
 
     async updateQuoteItem(userId: string, quoteId: string, updatedQuote: UpdateQuotesRequest) {
         logger.info("update quote item for user");
-        const todo = await this.getByQuoteId(userId, quoteId);
+        const quote = await this.getByQuoteId(userId, quoteId);
 
         await this.docClient.update({
             TableName: this.quotesTable,
             Key: {
                 userId,
-                createdAt: todo.createdAt
+                createdAt: quote.createdAt
             },
             UpdateExpression: 'set #name = :name, description = :description',
             ExpressionAttributeNames: {
               "#name": "name"
             },
             ExpressionAttributeValues: {
-              ":name": updatedQuote.name
+              ":name": updatedQuote.name,
+              ":description": updatedQuote.description
             }
         }).promise()   
     }
