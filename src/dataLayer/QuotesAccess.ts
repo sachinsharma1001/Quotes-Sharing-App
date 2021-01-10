@@ -50,13 +50,12 @@ export class QuotesAccess {
                 userId,
                 createdAt: quote.createdAt
             },
-            UpdateExpression: 'set #name = :name, description = :description',
+            UpdateExpression: 'set #name = :name',
             ExpressionAttributeNames: {
               "#name": "name"
             },
             ExpressionAttributeValues: {
-              ":name": updatedQuote.name,
-              ":description": updatedQuote.description
+              ":name": updatedQuote.name
             }
         }).promise()   
     }

@@ -4,14 +4,10 @@
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
     "required": [
-        "name",
-        "description"
+        "name"
     ],
     "properties": {
         "name": {
-            "type": "string"
-        },
-        "description": {
             "type": "string"
         }
     },
