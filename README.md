@@ -5,10 +5,10 @@ This application will allow creating/removing/updating/fetching quotes. Each quo
 
 ## Functionality of the application
 
-- **A user needs to authenticate in order to use an application home: See image below**
-- **The application allows users to create, update, delete quotes.**
-- **The application allows users to upload a file.**
-- **The application only displays items for a logged in user.**
+- A user needs to authenticate in order to use an application.
+- The application allows users to create, update, delete quotes.
+- The application allows users to upload a file.
+- The application only displays items for a logged in user.
 
 # Quotes items
 
